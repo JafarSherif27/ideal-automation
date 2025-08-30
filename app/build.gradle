@@ -1,0 +1,54 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    //Selenium
+    implementation 'org.seleniumhq.selenium:selenium-java:4.35.0'
+
+    //TestNG 
+    testImplementation 'org.testng:testng:7.11.0'
+
+    //Apache POI
+    // .xls
+    implementation 'org.apache.poi:poi:5.4.1'
+    // .xlsx
+    implementation 'org.apache.poi:poi-ooxml:5.4.1'
+
+    //Extend Reports
+    
+}
+
+// Apply a specific Java toolchain to ease working on different environments.
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+
+
+test {
+    useTestNG(){
+        //To set folder where tesng reports will be generated
+        outputDirectory =   file("test-execution-result")
+        //turn on default listeners
+        useDefaultListeners = true
+        // suites 'src/test/resources/testng.xml'
+    }
+    // To display execution status always
+    testLogging {
+        showStandardStreams = true
+        events "passed", "skipped", "failed"
+    }
+
+    outputs.upToDateWhen { false }
+
+}
