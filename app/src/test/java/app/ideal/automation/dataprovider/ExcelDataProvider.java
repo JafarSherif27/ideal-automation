@@ -43,22 +43,30 @@ public class ExcelDataProvider {
             Iterator<Row> rowIterator = sheet.iterator();
             int rowIndex = 0;
 
+            DataFormatter formatter = new DataFormatter();
+
             while (rowIterator.hasNext()) {
                 Row row = rowIterator.next();
 
-                if (rowIndex == 0) { // Skip header column
+                if (rowIndex == 0) { // Skip header row
                     rowIndex++;
                     continue;
                 }
 
                 List<String> innerList = new ArrayList<>();
                 for (Cell cell : row) {
+                    // Convert cell to string as displayed in Excel
+                    String cellValue = formatter.formatCellValue(cell);
+                    innerList.add(cellValue != null ? cellValue.trim() : "");
+
+                    /*
                     switch (cell.getCellType()) {
                         case STRING -> innerList.add(cell.getStringCellValue());
                         case NUMERIC -> innerList.add(String.valueOf(cell.getNumericCellValue()));
                         case BOOLEAN -> innerList.add(String.valueOf(cell.getBooleanCellValue()));
                         default -> innerList.add(""); // Blank or formula
-                    }
+                    } 
+                    */
                 }
 
                 if (!innerList.isEmpty()) {
