@@ -36,19 +36,23 @@ java {
 
 
 test {
-    useTestNG(){
-        //To set folder where tesng reports will be generated
-        outputDirectory =   file("test-execution-result")
-        //turn on default listeners
+    useTestNG() {
+        // Specif testng.xml
+        suites 'src/test/resources/testng.xml'
+
+        // Output folder for TestNG reports
+        outputDirectory = file("test-execution-result")
+
+        // Turn on default listeners
         useDefaultListeners = true
-        // suites 'src/test/resources/testng.xml'
     }
-    // To display execution status always
+
+    // To display execution status in console
     testLogging {
         showStandardStreams = true
         events "passed", "skipped", "failed"
     }
 
+    // Always run tests, even if Gradle thinks nothing changed
     outputs.upToDateWhen { false }
-
 }

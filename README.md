@@ -114,4 +114,19 @@ src/test/resources/testdata/
 - **Reusable utilities** under `utils/`  
 
 
+## Components integrated so far
 
+- **Created framework and pushed to GitHub**
+- **added dependencies(selenium, testing, poi)**
+- **added xml file and verified if it is working fine for parallel and cross browser testing**
+- **added single ton driver factory and verified that it is working fine**
+- **integrated poi- (verification pending)**
+
+
+## TODO
+
+- **ADD Utility class**
+- **Add extent report**
+- **Add pom**
+- 
+- 

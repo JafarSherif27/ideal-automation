@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-08-31T19:05:40 IST" name="CrossBrowserSuite" finished-at="2025-08-31T19:05:44 IST" duration-ms="4642">
+    <groups>
+    </groups>
+    <test started-at="2025-08-31T19:05:40 IST" name="ChromeTests" finished-at="2025-08-31T19:05:44 IST" duration-ms="4119">
+      <class name="app.ideal.automation.tests.ui.LoginTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:app.ideal.automation.tests.ui.LoginTest@7fd7a283]" started-at="2025-08-31T19:05:40 IST" name="setUp" finished-at="2025-08-31T19:05:41 IST" duration-ms="1441" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testValidLogin()[pri:0, instance:app.ideal.automation.tests.ui.LoginTest@7fd7a283]" started-at="2025-08-31T19:05:41 IST" name="testValidLogin" finished-at="2025-08-31T19:05:44 IST" duration-ms="2648" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidLogin -->
+      </class> <!-- app.ideal.automation.tests.ui.LoginTest -->
+    </test> <!-- ChromeTests -->
+    <test started-at="2025-08-31T19:05:40 IST" name="EdgeTests" finished-at="2025-08-31T19:05:44 IST" duration-ms="4642">
+      <class name="app.ideal.automation.tests.ui.LoginTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:app.ideal.automation.tests.ui.LoginTest@6531a794]" started-at="2025-08-31T19:05:40 IST" name="setUp" finished-at="2025-08-31T19:05:41 IST" duration-ms="1441" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testValidLogin()[pri:0, instance:app.ideal.automation.tests.ui.LoginTest@6531a794]" started-at="2025-08-31T19:05:41 IST" name="testValidLogin" finished-at="2025-08-31T19:05:44 IST" duration-ms="3170" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidLogin -->
+      </class> <!-- app.ideal.automation.tests.ui.LoginTest -->
+    </test> <!-- EdgeTests -->
+  </suite> <!-- CrossBrowserSuite -->
+</testng-results>
